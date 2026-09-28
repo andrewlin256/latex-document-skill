@@ -1,0 +1,111 @@
+\documentclass[10pt,a4paper]{article}
+% Compile with XeLaTeX (needed for the Chinese name in the header)
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK TC}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[skip=0.3em]{parskip}
+
+% ATS-safe: no hyperref, no xcolor, no graphicx, no tikz, no tabularx
+% Single column, plain text, standard fonts only
+
+\pagestyle{empty}
+
+% Section styling -- simple bold with horizontal rule
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\vspace{0.1em}\titlerule]
+\titlespacing*{\section}{0pt}{0.8em}{0.4em}
+
+% No hyphenation (keeps keywords intact for ATS parsing)
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% Entry command: Title | Org on the left, Dates on the right (one line)
+\newcommand{\entry}[3]{%
+    \noindent\textbf{#1} \textbar{} \textit{#3} \hfill #2%
+}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.1em, parsep=0pt, topsep=0.2em}
+
+\begin{document}
+
+% --- HEADER (in body, not header/footer) ---
+\begin{center}
+    {\LARGE\bfseries 林原志 Lin, Yuan-Zhi (Andrew)} \\[0.3em]
+    Taiwan \quad | \quad (+886) 952-323-631 \quad | \quad yzlin0718@gmail.com
+\end{center}
+
+% --- SUMMARY ---
+% DRAFT -- the original CV left this section blank ("..."); edit or replace as needed.
+\section{Summary}
+
+Pharmacist and MS candidate in Social and Administrative Pharmacy with hands-on experience in real-world evidence (RWE), pharmacoepidemiology, and market access. Skilled in NHIRD claims database analysis using SAS, NHI reimbursement dossier support, and HTA evidence synthesis.
+
+% --- EDUCATION ---
+\section{Education}
+
+\entry{MS in Social and Administrative Pharmacy}{Feb 2025 -- Jan 2027}{National Yang Ming Chiao Tung University}
+\begin{itemize}
+    \item Conducted large-scale claims database analysis (NHIRD) utilizing SAS for pharmacoepidemiologic study
+    \item Relevant Coursework: Pharmacoepidemiology, Clinical Research Design, Biostatistics, Analysis and Application of Healthcare Databases (SAS), Quantitative Data Analysis (R), Pharmacoeconomics
+\end{itemize}
+
+\vspace{0.2em}
+
+\entry{BS in Pharmacy}{Sep 2019 -- Jun 2024}{Kaohsiung Medical University}
+
+% --- INTERNSHIP EXPERIENCE ---
+\section{Internship Experience}
+
+\entry{Real-World Data Scientist Intern}{Jul 2026 -- Aug 2026}{Roche Product Taiwan}
+\begin{itemize}
+    \item Independently led three real-world evidence (RWE) projects across autoimmune and hematologic disease areas, spanning protocol design, data analysis, and results interpretation
+    \item Generated real-world evidence with potential to support future reimbursement dossiers and inform marketing strategy, helping build an early foundation of local evidence in Taiwan
+    \item Engaged regularly with physicians and cross-functional medical colleagues to align study design and outcome definitions with real-world clinical and strategic needs
+\end{itemize}
+
+\vspace{0.2em}
+
+\entry{Market Access Intern}{Jan 2025 -- Dec 2025}{Sanofi Taiwan}
+\begin{itemize}
+    \item Built a structured database of PBRS meeting records and conducted statistical analysis using SAS, defining case characteristics as covariates to examine their association with NHI reimbursement approval timelines
+    \item Contributed to an NHI reimbursement dossier by conducting literature reviews, synthesizing HTA results, and assisting in BIA development with epidemiological parameter estimation
+    \item Supported a disease burden research collaboration with a public health academic team, coordinating literature reviews and consolidating epidemiological parameters to inform advocacy strategies
+    \item Developed an interactive Power BI dashboard to visualize PBRS meeting insights, leveraging an AI model to automate the extraction and consolidation of key information from minutes
+    \item Led the Intern CSR Project, managing its full lifecycle from planning to execution, and liaising with internal and external partners to successfully deliver two internal activities
+\end{itemize}
+
+\vspace{0.2em}
+
+\entry{Pharmacist Intern}{Jan 2024 -- May 2024}{Clinical Pharmacy Department, Tri-Service General Hospital}
+\begin{itemize}
+    \item Collaborated with fellow interns to develop educational videos and pamphlets on coronary artery disease medications, with responsibilities including project planning, literature review, and materials preparation
+    \item Recognized as the ``Outstanding Intern'' among a cohort of seven interns for exceptional performance
+\end{itemize}
+
+\vspace{0.2em}
+
+\entry{Summer Intern}{Jul 2023 -- Aug 2023}{Viatris Taiwan \& TTY Biopharm}
+\begin{itemize}
+    \item Completed a rotational internship across key departments, gaining insights into the drug development process and the distinct roles within the pharmaceutical industry
+    \item Developed communication skills for interacting with healthcare professionals (HCPs) and gained experience in sharing product information with physicians, as well as discussing therapeutic options
+\end{itemize}
+
+% --- EXTRACURRICULAR ACTIVITIES ---
+\section{Extracurricular Activities}
+
+\entry{Co-founder \& President}{Aug 2023 -- Jul 2024}{KMU Pharmaceutical Career Research Club (KMU-PCR)}
+\begin{itemize}
+    \item Proactively founded the Pharmaceutical Career Research Club and developed its operational policy, serving as the central coordinator for all internal and external stakeholders
+    \item Partnered with 5 companies and industry organizations to lead 12 projects over 9 months, each engaging 30+ participants, with responsibilities spanning project management and cross-team coordination
+\end{itemize}
+
+% --- SKILLS ---
+\section{Skills}
+
+\textbf{Statistical Software:} SAS (Proficient), R (Familiar) \\
+\textbf{Tools:} Power BI \\
+\textbf{Languages:} Mandarin Chinese (Native), English (TOEIC 845/990)
+
+\end{document}
