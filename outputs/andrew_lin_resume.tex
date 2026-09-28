@@ -2,8 +2,9 @@
 % Compile with XeLaTeX (needed for the Chinese name in the header)
 \usepackage{fontspec}
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Serif CJK TC}
-\usepackage[margin=0.55in]{geometry}
+\setmainfont{Liberation Sans} % sans-serif (Arial-metric)
+\setCJKmainfont{Noto Sans CJK TC}
+\usepackage[top=0.55in, bottom=0.55in, left=0.45in, right=0.45in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage[skip=0.3em]{parskip}
@@ -20,6 +21,7 @@
 % No hyphenation (keeps keywords intact for ATS parsing)
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
+\emergencystretch=3em
 
 % Entry command: Title | Org on the left, Dates on the right (one line)
 \newcommand{\entry}[3]{%
@@ -33,7 +35,7 @@
 % --- HEADER (in body, not header/footer) ---
 \begin{center}
     {\LARGE\bfseries 林原志 Lin, Yuan-Zhi (Andrew)} \\[0.3em]
-    Taiwan \quad | \quad (+886) 952-323-631 \quad | \quad yzlin0718@gmail.com
+    (+886) 952-323-631 \quad | \quad yzlin0718@gmail.com \quad | \quad English (TOEIC 845/990)
 \end{center}
 
 % --- SUMMARY ---
@@ -100,12 +102,5 @@ Pharmacist and MS candidate in Social and Administrative Pharmacy with hands-on 
     \item Proactively founded the Pharmaceutical Career Research Club and developed its operational policy, serving as the central coordinator for all internal and external stakeholders
     \item Partnered with 5 companies and industry organizations to lead 12 projects over 9 months, each engaging 30+ participants, with responsibilities spanning project management and cross-team coordination
 \end{itemize}
-
-% --- SKILLS ---
-\section{Skills}
-
-\textbf{Statistical Software:} SAS (Proficient), R (Familiar) \\
-\textbf{Tools:} Power BI \\
-\textbf{Languages:} Mandarin Chinese (Native), English (TOEIC 845/990)
 
 \end{document}
